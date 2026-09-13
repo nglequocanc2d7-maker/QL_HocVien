@@ -185,7 +185,7 @@ namespace QL_HocVien.Models.DTOs
             get
             {
                 if (!Score.HasValue) return "Chưa thi";
-                if (Score.Value >= 8.5) return "Xuất sắc";
+                if (Score.Value >= 9.0) return "Xuất sắc";
                 if (Score.Value >= 8.0) return "Giỏi";
                 if (Score.Value >= 7.0) return "Khá";
                 if (Score.Value >= 5.0) return "Đạt (TB)";
