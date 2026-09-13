@@ -6,7 +6,7 @@ namespace QL_HocVien.Models.Entity
     {
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty; // Tiêu đề sự kiện
-        public string Category { get; set; } = "Kiểm tra thể lực"; // "Kiểm tra thể lực", "Thi cử quân sự", "Tập luyện / Rèn luyện", "Hội thao / Sự kiện"
+        public string Category { get; set; } = "Kiểm tra thể lực"; // "Kiểm tra thể lực", "Thi, kiểm tra", "Tập luyện / Rèn luyện", "Hội thao / Sự kiện"
         public DateTime StartDate { get; set; } = DateTime.Today;
         public DateTime EndDate { get; set; } = DateTime.Today;
         public string TargetUnit { get; set; } = "Toàn đơn vị"; // Đơn vị/Lớp áp dụng (Đại đội 1, Toàn đơn vị, K26A...)
@@ -35,7 +35,7 @@ namespace QL_HocVien.Models.Entity
             {
                 if (Category == "Kiểm tra thể lực" || Title.Contains("thể lực", StringComparison.OrdinalIgnoreCase))
                     return "/Assets/Images/timeline_art_watchtower.png";
-                if (Category == "Thi cử quân sự" || Title.Contains("bắn súng", StringComparison.OrdinalIgnoreCase))
+                if (Category == "Thi, kiểm tra" || Title.Contains("bắn súng", StringComparison.OrdinalIgnoreCase))
                     return "/Assets/Images/timeline_art_ak_shooting.png";
                 if (Category == "Tập luyện / Rèn luyện" || Title.Contains("hành quân", StringComparison.OrdinalIgnoreCase))
                     return "/Assets/Images/timeline_art_marching.png";
@@ -46,7 +46,7 @@ namespace QL_HocVien.Models.Entity
         public string CategoryBg => Category switch
         {
             "Kiểm tra thể lực" => "#0C683B",
-            "Thi cử quân sự" => "#0A6A45",
+            "Thi, kiểm tra" => "#0A6A45",
             "Tập luyện / Rèn luyện" => "#0C683B",
             "Hội thao / Sự kiện" => "#1D4ED8",
             _ => "#334155"
