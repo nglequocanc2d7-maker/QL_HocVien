@@ -151,11 +151,11 @@ namespace QL_HocVien.Services.Implementations
                 int complete = total - missing;
 
                 string comment;
-                if (avgGpa >= 7.5 && missing == 0)
-                    comment = "Đơn vị học tập xuất sắc, quân số đủ 100% môn";
+                if (avgGpa >= 8.0 && missing == 0)
+                    comment = "Đơn vị giỏi, quân số đủ 100% môn";
                 else if (avgGpa >= 7.0)
                     comment = missing > 0 ? $"Học lực Khá, cần đôn đốc {missing} đ/c thi bù" : "Đơn vị đạt danh hiệu Học tập Khá toàn diện";
-                else if (avgGpa >= 6.0)
+                else if (avgGpa >= 5.0)
                     comment = $"Học lực trung bình, có {missing} đ/c chưa hoàn thành nội dung";
                 else
                     comment = "Cần tăng cường phụ đạo và tổ chức ôn tập kiểm tra bù";
